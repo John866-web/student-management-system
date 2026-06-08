@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Management System</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#6a11cb,#2575fc);
+    min-height:100vh;
+    padding:20px;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:whitesmoke;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+h1{
+    text-align:center;
+    color:#2575fc;
+    margin-bottom:20px;
+}
+
+.form{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+}
+
+input{
+    padding:12px;
+    border:2px solid #ddd;
+    border-radius:10px;
+    outline:none;
+}
+
+input:focus{
+    border-color:#2575fc;
+}
+
+button{
+    padding:12px;
+    background:#2575fc;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#174fcf;
+}
+
+.search-box{
+    margin:20px 0;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+}
+
+th{
+    background:#2575fc;
+    color:white;
+    padding:12px;
+}
+
+td{
+    padding:12px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+
+.delete-btn{
+    background:red;
+    padding:8px 12px;
+    border:none;
+    color:white;
+    border-radius:5px;
+}
+
+.delete-btn:hover{
+    background:darkred;
+}
+
+.footer{
+    text-align:center;
+    margin-top:20px;
+    color:gray;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎓 Student Management System</h1>
+
+<div class="form">
+    <input type="text" id="name" placeholder="Student Name">
+    <input type="text" id="regno" placeholder="Register Number">
+    <input type="text" id="dept" placeholder="Department">
+    <button onclick="addStudent()">Add Student</button>
+</div>
+
+<div class="search-box">
+    <input type="text" id="search" placeholder="Search Student..." onkeyup="searchStudent()">
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Reg No</th>
+<th>Department</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody id="studentTable">
+</tbody>
+</table>
+
+<div class="footer">
+    Made with ❤️ by CSE Student
+</div>
+
+</div>
+
+<script>
+
+let students = JSON.parse(localStorage.getItem("students")) || [];
+
+function saveData(){
+    localStorage.setItem("students", JSON.stringify(students));
+}
+
+function displayStudents(){
+
+    let table = document.getElementById("studentTable");
+    table.innerHTML="";
+
+    students.forEach((student,index)=>{
+
+        table.innerHTML += `
+        <tr>
+            <td>${student.name}</td>
+            <td>${student.regno}</td>
+            <td>${student.dept}</td>
+            <td>
+                <button class="delete-btn"
+                onclick="deleteStudent(${index})">
+                Delete
+                </button>
+            </td>
+        </tr>
+        `;
+    });
+}
+
+function addStudent(){
+
+    let name = document.getElementById("name").value;
+    let regno = document.getElementById("regno").value;
+    let dept = document.getElementById("dept").value;
+
+    if(name==="" || regno==="" || dept===""){
+        alert("Please fill all fields");
+        return;
+    }
+
+    students.push({
+        name:name,
+        regno:regno,
+        dept:dept
+    });
+
+    saveData();
+    displayStudents();
+
+    document.getElementById("name").value="";
+    document.getElementById("regno").value="";
+    document.getElementById("dept").value="";
+}
+
+function deleteStudent(index){
+
+    students.splice(index,1);
+
+    saveData();
+    displayStudents();
+}
+
+function searchStudent(){
+
+    let filter =
+    document.getElementById("search")
+    .value.toLowerCase();
+
+    let rows =
+    document.querySelectorAll("#studentTable tr");
+
+    rows.forEach(row=>{
+
+        let text =
+        row.innerText.toLowerCase();
+
+        row.style.display =
+        text.includes(filter)
+        ? ""
+        : "none";
+    });
+}
+
+displayStudents();
+
+</script>
+
+</body>
+</html>
