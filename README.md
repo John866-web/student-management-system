@@ -2,7 +2,7 @@
 A simple Student Management System built using HTML, CSS, and JavaScript.
 This project allows users to add, delete, search student records, and stores data using Local Storage.
 
-🚀 Features
+   🚀 Features
 
    ➕ Add student details
    ❌ Delete student records
@@ -10,25 +10,28 @@ This project allows users to add, delete, search student records, and stores dat
    💾 Data stored using browser Local Storage
    📱 Responsive UI design
 
+
 📸 Screenshot
 
 <img width="1333" height="692" alt="Image" src="https://github.com/user-attachments/assets/2bfb5c83-586a-4dfc-9932-8961f830ff78" />
 
+
+
 🛠️ Tech Stack
 
-    HTML5
-    CSS3
-    JavaScript (Vanilla JS)
-    Local Storage API
+    1. HTML5
+    2. CSS3
+    3. JavaScript (Vanilla JS)
+    4. Local Storage API
 
 📂 Project Structure
 
    student-management-system/
-   │
-   ├── index.html
-   ├── style.css
-   ├── script.js
-   └── README.md
+│
+├── index.html
+├── style.css
+├── script.js
+└── README.md
 
 Installation & Setup
 
@@ -48,12 +51,12 @@ Installation & Setup
 
        This project helped me understand:
 
-       Python programming fundamentals
-       CRUD operations (Create, Read, Update, Delete)
-       Database integration (SQLite/MySQL)
-       GUI development using Tkinter
-       Project structuring
-       Git & GitHub workflow
+       1. Python programming fundamentals
+       2. CRUD operations (Create, Read, Update, Delete)
+       3. Database integration (SQLite/MySQL)
+       4. GUI development using Tkinter
+       5. Project structuring
+       6. Git & GitHub workflow
 
 🚀 Future Improvements
 
