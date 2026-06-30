@@ -42,13 +42,9 @@ This project allows users to add, delete, search student records, and stores dat
    student-management-system/
    
    │
-   
    ├── index.html
-   
    ├── style.css
-   
    ├── script.js
-   
    └── README.md
 
 
