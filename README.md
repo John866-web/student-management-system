@@ -7,11 +7,11 @@ This project allows users to add, delete, search student records, and stores dat
    🚀 Features
 
    
-      * ➕ Add student details
-      * ❌ Delete student records
-      * 🔍 Search students easily
-      * 💾 Data stored using browser Local Storage
-      * 📱 Responsive UI design
+      *➕ Add student details
+      *❌ Delete student records
+      *🔍 Search students easily
+      *💾 Data stored using browser Local Storage
+      *📱 Responsive UI design
 
 
 
