@@ -4,17 +4,18 @@ This project allows users to add, delete, search student records, and stores dat
 
 🚀 Features
 
- ➕ Add student details
- ❌ Delete student records
- 🔍 Search students easily
- 💾 Data stored using browser Local Storage
- 📱 Responsive UI design
+   ➕ Add student details
+   ❌ Delete student records
+   🔍 Search students easily
+   💾 Data stored using browser Local Storage
+   📱 Responsive UI design
 
 📸 Screenshot
 
 <img width="1333" height="692" alt="Image" src="https://github.com/user-attachments/assets/2bfb5c83-586a-4dfc-9932-8961f830ff78" />
 
 🛠️ Tech Stack
+
     HTML5
     CSS3
     JavaScript (Vanilla JS)
@@ -22,37 +23,37 @@ This project allows users to add, delete, search student records, and stores dat
 
 📂 Project Structure
 
-  student-management-system/
-  │
-  ├── index.html
-  ├── style.css
-  ├── script.js
-  └── README.md
+   student-management-system/
+   │
+   ├── index.html
+   ├── style.css
+   ├── script.js
+   └── README.md
 
 Installation & Setup
 
-1. Clone the repository
-   git clone https://github.com/yourusername/Student-Database-Management-System.git
+        1. Clone the repository
+        git clone https://github.com/yourusername/Student-Database-Management-System.git
 
-2. Move into project directory
-   cd Student-Database-Management-System
+        2. Move into project directory
+        cd Student-Database-Management-System
 
-3. Install dependencies
-   pip install -r requirements.txt
+        3. Install dependencies
+        pip install -r requirements.txt
 
-4. Run the project
-   python main.py
+        4. Run the project
+        python main.py
 
    🎯 Learning Outcomes
 
-This project helped me understand:
+       This project helped me understand:
 
-   Python programming fundamentals
-   CRUD operations (Create, Read, Update, Delete)
-   Database integration (SQLite/MySQL)
-   GUI development using Tkinter
-   Project structuring
-   Git & GitHub workflow
+       Python programming fundamentals
+       CRUD operations (Create, Read, Update, Delete)
+       Database integration (SQLite/MySQL)
+       GUI development using Tkinter
+       Project structuring
+       Git & GitHub workflow
 
 🚀 Future Improvements
 
