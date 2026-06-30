@@ -25,10 +25,11 @@ This project allows users to add, delete, search student records, and stores dat
 
 🛠 Tech Stack
 
-1. HTML5 - For application structure
-2. CSS3 - For styling and layout (Embedded)
-3. JavaScript (Vanilla JS) - For dynamic student management logic
-4. Local Storage API - For client-side data persistence
+
+            1. HTML5 - For application structure
+            2. CSS3 - For styling and layout (Embedded)
+            3. JavaScript (Vanilla JS) - For dynamic student management logic
+            4. Local Storage API - For client-side data persistence
 
 
 
