@@ -15,7 +15,7 @@ This project allows users to add, delete, search student records, and stores dat
 
 
 
-📸 Screenshot
+📸 Preview
 
 <img width="1333" height="692" alt="Image" src="https://github.com/user-attachments/assets/2bfb5c83-586a-4dfc-9932-8961f830ff78" />
 
